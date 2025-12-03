@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "Amalfi Coast";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Amalfi-Coast.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Mont";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Mont-Bold.woff") format("woff");
+}

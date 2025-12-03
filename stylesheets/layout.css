@@ -1,0 +1,54 @@
+html {
+  background-color: #0270c2;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.italic-text {
+  font-family: "Amalfi Coast";
+}
+
+.bold-text {
+  font-family: "Mont";
+  text-transform: uppercase;
+}
+
+.circle-one {
+  width: 39px;
+  height: 39px;
+  background-color: #f6ede4;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.circle-two {
+  width: 39px;
+  height: 39px;
+  background-color: #f6ede4;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.circle-three {
+  width: 39px;
+  height: 39px;
+  background-color: #f6ede4;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.circle-four {
+  width: 39px;
+  height: 39px;
+  background-color: #f6ede4;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.circle-five {
+  width: 39px;
+  height: 39px;
+  background-color: #f6ede4;
+  border-radius: 50%;
+  position: absolute;
+}
