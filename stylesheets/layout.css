@@ -10,6 +10,7 @@ body {
   width: 100%;
   height: 100vh;
   min-height: 100vh;
+  cursor: url("../images/cursor.cur"), url("../images/cursor.png"), auto;
 }
 
 /* Текстовой блок - по центру */
@@ -50,8 +51,8 @@ body {
 
 .snowflakes-first {
   position: absolute;
-  top: 48%;
-  left: 4.17%;
+  top: 49%;
+  left: 6%;
   width: 5.5vw;
   height: auto;
   z-index: 2;
@@ -78,9 +79,9 @@ body {
 
 .ball {
   position: absolute;
-  bottom: 6%;
-  left: 9%;
-  width: 20vw;
+  bottom: 10%;
+  left: 12%;
+  width: 23vw;
   height: auto;
   z-index: 2;
 }
@@ -254,4 +255,11 @@ body {
     -webkit-transform: translate3d(15%, 100%, 0);
     transform: translate3d(15%, 100%, 0);
   }
+}
+
+.card-wrapper {
+  position: relative;
+  width: 100vw;
+  height: auto;
+  aspect-ratio: 16 / 9;
 }
