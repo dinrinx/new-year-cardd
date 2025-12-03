@@ -2,53 +2,256 @@ html {
   background-color: #0270c2;
   box-sizing: border-box;
   overflow-x: hidden;
+  height: 100%;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+}
+
+/* Текстовой блок - по центру */
+.text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  vertical-align: middle;
 }
 
 .italic-text {
   font-family: "Amalfi Coast";
+  font-size: 4.17vw;
+  color: #ffffff;
+  line-height: 2.5;
 }
 
 .bold-text {
   font-family: "Mont";
   text-transform: uppercase;
+  font-size: 9.4vw;
+  color: #ffffff;
+  line-height: 0.8;
+  font-weight: bold;
 }
 
-.circle-one {
-  width: 39px;
-  height: 39px;
-  background-color: #f6ede4;
-  border-radius: 50%;
+/* картинки слева направо */
+.big-candy {
   position: absolute;
+  top: 3.5%;
+  left: 4%;
+  width: 12vw;
+  height: auto;
+  z-index: 2;
 }
 
-.circle-two {
-  width: 39px;
-  height: 39px;
-  background-color: #f6ede4;
-  border-radius: 50%;
+.snowflakes-first {
   position: absolute;
+  top: 48%;
+  left: 4.17%;
+  width: 5.5vw;
+  height: auto;
+  z-index: 2;
 }
 
-.circle-three {
-  width: 39px;
-  height: 39px;
-  background-color: #f6ede4;
-  border-radius: 50%;
+.star-first {
   position: absolute;
+  top: 32%;
+  left: 16%;
+  width: 6.5vw;
+  height: auto;
+  z-index: 2;
 }
 
-.circle-four {
-  width: 39px;
-  height: 39px;
-  background-color: #f6ede4;
-  border-radius: 50%;
+.line-first {
   position: absolute;
+  top: 9.9%;
+  left: 16.56%;
+  width: 9vw;
+  height: auto;
+  z-index: 2;
+  transform: rotate(-20deg);
 }
 
-.circle-five {
-  width: 39px;
-  height: 39px;
-  background-color: #f6ede4;
-  border-radius: 50%;
+.ball {
   position: absolute;
+  bottom: 6%;
+  left: 9%;
+  width: 20vw;
+  height: auto;
+  z-index: 2;
+}
+
+.circle-candy-first {
+  position: absolute;
+  top: 26%;
+  left: 26%;
+  width: 8.3vw;
+  height: auto;
+  z-index: 2;
+}
+
+.small-candy {
+  position: absolute;
+  top: 6%;
+  left: 35%;
+  width: 15vw;
+  height: auto;
+  z-index: 2;
+}
+
+.snowflakes-second {
+  position: absolute;
+  top: 15%;
+  right: 30%;
+  width: 5.5vw;
+  height: auto;
+  z-index: 2;
+}
+
+.wreath {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  width: 22vw;
+  height: auto;
+  z-index: 2;
+}
+
+.sock-right {
+  position: absolute;
+  bottom: 8%;
+  left: 37%;
+  width: 6vw;
+  height: auto;
+  z-index: 2;
+}
+
+.snowflakes-third {
+  position: absolute;
+  bottom: 17%;
+  right: 30%;
+  width: 5.5vw;
+  height: auto;
+  z-index: 2;
+  transform: rotate(26deg);
+}
+
+.circle-candy-second {
+  position: absolute;
+  bottom: 33%;
+  right: 20%;
+  width: 13vw;
+  height: auto;
+  z-index: 2;
+}
+
+.star-second {
+  position: absolute;
+  bottom: 11.5%;
+  right: 45%;
+  width: 6.5vw;
+  height: auto;
+  z-index: 2;
+}
+
+.line-second {
+  position: absolute;
+  top: 10%;
+  right: 38%;
+  width: 9vw;
+  height: auto;
+  z-index: 2;
+}
+
+.line-third {
+  position: absolute;
+  bottom: 10%;
+  right: 17%;
+  width: 9vw;
+  height: auto;
+  z-index: 2;
+  transform: rotate(30deg);
+}
+
+.sock-left {
+  position: absolute;
+  bottom: 12%;
+  right: 5%;
+  width: 12vw;
+  height: auto;
+  z-index: 2;
+}
+
+/* Анимация падающего снега */
+
+.snow {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+  -webkit-animation: snow linear infinite;
+  animation: snow linear infinite;
+}
+.snow.foreground {
+  background-image: url("https://dl6rt3mwcjzxg.cloudfront.net/assets/snow/snow-large-075d267ecbc42e3564c8ed43516dd557.png");
+  -webkit-animation-duration: 15s;
+  animation-duration: 15s;
+}
+.snow.foreground.layered {
+  -webkit-animation-delay: 7.5s;
+  animation-delay: 7.5s;
+}
+.snow.middleground {
+  background-image: image-url(
+    "https://dl6rt3mwcjzxg.cloudfront.net/assets/snow/snow-medium-0b8a5e0732315b68e1f54185be7a1ad9.png"
+  );
+  -webkit-animation-duration: 20s;
+  animation-duration: 20s;
+}
+.snow.middleground.layered {
+  -webkit-animation-delay: 10s;
+  animation-delay: 10s;
+}
+.snow.background {
+  background-image: image-url(
+    "https://dl6rt3mwcjzxg.cloudfront.net/assets/snow/snow-small-1ecd03b1fce08c24e064ff8c0a72c519.png"
+  );
+  -webkit-animation-duration: 30s;
+  animation-duration: 30s;
+}
+.snow.background.layered {
+  -webkit-animation-delay: 15s;
+  animation-delay: 15s;
+}
+
+@-webkit-keyframes snow {
+  0% {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(15%, 100%, 0);
+    transform: translate3d(15%, 100%, 0);
+  }
+}
+
+@keyframes snow {
+  0% {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(15%, 100%, 0);
+    transform: translate3d(15%, 100%, 0);
+  }
 }
